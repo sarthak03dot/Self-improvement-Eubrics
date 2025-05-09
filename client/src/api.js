@@ -1,6 +1,7 @@
 import axios from 'axios';
+const API = 'https://self-improvement-eubrics-backend.onrender.com';
 
-const api = axios.create({ baseURL: 'http://localhost:5000/api' });
+const api = axios.create({ baseURL: `${API}/api` });
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
